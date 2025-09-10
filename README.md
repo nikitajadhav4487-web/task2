@@ -1,5 +1,5 @@
 #include <stdio.h> #include <stdint.h>
-
+/*memory allocation without using malloc or calloc functions*/
 #define MEMORY_SIZE (100 * 1024) // 100 KB
 
 typedef struct BlockHeader { uint32_t size; // Size of this block (excluding header) uint8_t free; // 1 if free, 0 if allocated struct BlockHeader *next; // Pointer to next block } BlockHeader;
